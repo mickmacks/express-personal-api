@@ -76,7 +76,7 @@ app.get('/api/profile', function apiIndex(req, res) {
 
 });
 
-app.get('/api/Sketchbook', function apiIndex(req, res) {
+app.get('/api/sketchbook', function apiSketchbook(req, res) {
 
   res.json([
 
@@ -84,10 +84,10 @@ app.get('/api/Sketchbook', function apiIndex(req, res) {
       _id: 1,
       sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
       name: 'Camila',
-      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic']
-      paper: 'Moleskin Watercolour'
+      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
+      paper: 'Moleskin Watercolour',
       height: '8.5 inches',
-      width: '11 inches'
+      width: '11 inches',
       date: '22/11/2016',
       hours: 12,
       location: 'Analog Coffee',
@@ -99,10 +99,10 @@ app.get('/api/Sketchbook', function apiIndex(req, res) {
       _id: 2,
       sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
       name: 'Jack',
-      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic']
-      paper: 'Moleskin Watercolour'
+      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
+      paper: 'Moleskin Watercolour',
       height: '8.5 inches',
-      width: '11 inches'
+      width: '11 inches',
       date: '22/11/2016',
       hours: 10,
       location: 'Café Rosso',
@@ -114,10 +114,10 @@ app.get('/api/Sketchbook', function apiIndex(req, res) {
       _id: 3,
       sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
       name: 'Rosa',
-      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic']
-      paper: 'Moleskin Watercolour'
+      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
+      paper: 'Moleskin Watercolour',
       height: '7 inches',
-      width: '4.5 inches'
+      width: '4.5 inches',
       date: '22/11/2016',
       hours: 6,
       location: 'Philosafy Café',
