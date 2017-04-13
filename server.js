@@ -52,8 +52,12 @@ app.get('/api', function apiIndex(req, res) {
     baseUrl: "http://serene-falls-27789.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
-      {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      // {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      {method: "GET", path: "/api/profile", description: "Data about me"},
+      {method: "GET", path: "/api/sketchbook", description: "Index of all sketchbook data"},
+      {method: "GET", path: "/api/sketchbook/:id", description: "Show a specific sketch"},
+      {method: "POST", path: "/api/sketchbook?name=Example&image=ExampleURL&etc…", description: "Make new database entry using url parameters"},
+      {method: "PATCH", path: "/api/sketchbook?id=ID&name=Example&image=ExampleURL&etc…", description: "Replace a database entry"},
+      {method: "DELETE", path: "/api/sketchbook/:id", description: "Delete a database entry"}
     ]
   })
 });
@@ -67,7 +71,7 @@ app.get('/api/profile', function apiIndex(req, res) {
     githubProfileImage: 'https://avatars1.githubusercontent.com/u/19177266?v=3&s=460',
     personalSiteLink: 'http://www.mahmoudbachir.com',
     currentCity: 'San Francisco',
-    pets: [
+    petFriends: [
       {name: 'Tater', type: 'Dog', breed:'Bassett Hound'},
       {name: 'Pablo', type: 'Cat', breed:'Maine Coone'}
     ]
@@ -76,59 +80,23 @@ app.get('/api/profile', function apiIndex(req, res) {
 
 });
 
+// GET the sketchbook json with compiled data from Sketch and Material models 
+
 app.get('/api/sketchbook', function apiSketchbook(req, res) {
 
-  res.json([
-
-    { 
-      _id: 1,
-      sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
-      name: 'Camila',
-      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
-      paper: 'Moleskin Watercolour',
-      height: '8.5 inches',
-      width: '11 inches',
-      date: '22/11/2016',
-      hours: 12,
-      location: 'Analog Coffee',
-      lng: 42.66,
-      lat: -123.21,
-      complete: true
-    },
-    { 
-      _id: 2,
-      sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
-      name: 'Jack',
-      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
-      paper: 'Moleskin Watercolour',
-      height: '8.5 inches',
-      width: '11 inches',
-      date: '22/11/2016',
-      hours: 10,
-      location: 'Café Rosso',
-      lng: 42.66,
-      lat: -123.21,
-      complete: false
-    },    
-    { 
-      _id: 3,
-      sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
-      name: 'Rosa',
-      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
-      paper: 'Moleskin Watercolour',
-      height: '7 inches',
-      width: '4.5 inches',
-      date: '22/11/2016',
-      hours: 6,
-      location: 'Philosafy Café',
-      lng: 42.66,
-      lat: -123.21,
-      complete: true
-    }
-
-  ]);
+  res.json(data);
   
 });
+
+// POST a new sketch entry to the database.
+
+// PUT a new data entry into an existing sketch database entry.
+
+// DELETE an entire sketch entry from the database.
+
+
+
+
 
 
 
