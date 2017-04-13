@@ -48,7 +48,7 @@ app.get('/api', function apiIndex(req, res) {
   res.json({
     woopsIForgotToDocumentAllMyEndpoints: false, // CHANGE ME ;)
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/mickmacks/express-personal-api/README.md",
+    documentationUrl: "https://github.com/mickmacks/express-personal-api/blob/master/README.md",
     baseUrl: "http://serene-falls-27789.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
