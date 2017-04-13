@@ -72,9 +72,65 @@ app.get('/api/profile', function apiIndex(req, res) {
       {name: 'Pablo', type: 'Cat', breed:'Maine Coone'}
     ]
 
-  })
+  });
 
 });
+
+app.get('/api/Sketchbook', function apiIndex(req, res) {
+
+  res.json([
+
+    { 
+      _id: 1,
+      sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
+      name: 'Camila',
+      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic']
+      paper: 'Moleskin Watercolour'
+      height: '8.5 inches',
+      width: '11 inches'
+      date: '22/11/2016',
+      hours: 12,
+      location: 'Analog Coffee',
+      lng: 42.66,
+      lat: -123.21,
+      complete: true
+    },
+    { 
+      _id: 2,
+      sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
+      name: 'Jack',
+      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic']
+      paper: 'Moleskin Watercolour'
+      height: '8.5 inches',
+      width: '11 inches'
+      date: '22/11/2016',
+      hours: 10,
+      location: 'Café Rosso',
+      lng: 42.66,
+      lat: -123.21,
+      complete: false
+    },    
+    { 
+      _id: 3,
+      sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
+      name: 'Rosa',
+      materials: ['Watercolour', 'Watercolour pencil', 'Acrylic']
+      paper: 'Moleskin Watercolour'
+      height: '7 inches',
+      width: '4.5 inches'
+      date: '22/11/2016',
+      hours: 6,
+      location: 'Philosafy Café',
+      lng: 42.66,
+      lat: -123.21,
+      complete: true
+    }
+
+  ]);
+  
+});
+
+
 
 /**********
  * SERVER *
