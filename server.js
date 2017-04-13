@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+var db = require('./models');
 
 /**********
  * ROUTES *
@@ -46,16 +46,34 @@ app.get('/api', function apiIndex(req, res) {
   // TODO: Document all your api endpoints below as a simple hardcoded JSON object.
   // It would be seriously overkill to save any of this to your database.
   res.json({
-    woopsIForgotToDocumentAllMyEndpoints: true, // CHANGE ME ;)
+    woopsIForgotToDocumentAllMyEndpoints: false, // CHANGE ME ;)
     message: "Welcome to my personal api! Here's what you need to know!",
-    documentationUrl: "https://github.com/example-username/express-personal-api/README.md", // CHANGE ME
-    baseUrl: "http://YOUR-APP-NAME.herokuapp.com", // CHANGE ME
+    documentationUrl: "https://github.com/mickmacks/express-personal-api/README.md",
+    baseUrl: "http://serene-falls-27789.herokuapp.com",
     endpoints: [
       {method: "GET", path: "/api", description: "Describes all available endpoints"},
       {method: "GET", path: "/api/profile", description: "Data about me"}, // CHANGE ME
-      {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
+      // {method: "POST", path: "/api/campsites", description: "E.g. Create a new campsite"} // CHANGE ME
     ]
   })
+});
+
+app.get('/api/profile', function apiIndex(req, res) {
+  res.json({
+
+    name: 'Mahmoud Bachir',
+    githubUsername: 'mickmacks',
+    githubLink: 'https://github.com/mickmacks',
+    githubProfileImage: 'https://avatars1.githubusercontent.com/u/19177266?v=3&s=460',
+    personalSiteLink: 'http://www.mahmoudbachir.com',
+    currentCity: 'San Francisco',
+    pets: [
+      {name: 'Tater', type: 'Dog', breed:'Bassett Hound'},
+      {name: 'Pablo', type: 'Cat', breed:'Maine Coone'}
+    ]
+
+  })
+
 });
 
 /**********
