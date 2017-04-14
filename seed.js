@@ -3,22 +3,22 @@
 
 var db = require('./models');
 
-var sketch1 = new Sketch {
+var sketch1 = new Sketch (
 
-	sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
-	name: 'Camila',
-	materials: 'Material',
-	paper: 'Moleskin Watercolour',
-	height: '8.5 inches',
-	width: '11 inches',
-	// date: '22/11/2016',
-	hours: 12,
-	location: 'Analog Coffee',
-	lng: 42.66,
-	lat: -123.21,
-	complete: true
+	sketch = 'https://www.instagram.com/p/BNI4ppXj_bI/',
+	name = 'Camila',
+	materials = 'Material',
+	paper = 'Moleskin Watercolour',
+	height = '8.5 inches',
+	width = '11 inches',
+	// date = '22/11/2016',
+	hours = 12,
+	location = 'Analog Coffee',
+	lng = 42.66,
+	lat = -123.21,
+	complete = true
 
-};
+);
 
 var sketchList = [
 
