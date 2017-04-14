@@ -84,7 +84,9 @@ app.get('/api/profile', function apiIndex(req, res) {
 
 app.get('/api/sketchbook', function apiSketchbook(req, res) {
 
-  res.json(data);
+  console.log(db);
+  console.log(db.Sketch);
+  res.json(db.Sketch);
   
 });
 
