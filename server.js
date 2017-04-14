@@ -82,12 +82,21 @@ app.get('/api/profile', function apiIndex(req, res) {
 
 // GET the sketchbook json with compiled data from Sketch and Material models 
 
-app.get('/api/sketchbook', function apiSketchbook(req, res) {
+app.get('/api/sketchbook', function (req, res) {
+  // send all books as JSON response
+  db.Sketch.find({})
+    // populate fills in the author id with all the author data
+    // .populate('author')
 
-  console.log(db);
-  console.log(db.Sketch);
-  res.json(db.Sketch);
-  
+    .exec(function(err, sketches){
+
+      if (err) { 
+        return console.log("index error: " + err); 
+      } else {
+        res.json(sketches);
+      }
+
+    });
 });
 
 // POST a new sketch entry to the database.
