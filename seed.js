@@ -28,7 +28,7 @@ var sketchList = [
 		materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
 		paper: 'Moleskin Watercolour',
 		height: '8.5 inches',
-		width: '11 inches'
+		width: '11 inches',
 		date: '22/11/2016',
 		hours: 10,
 		location: 'Café Rosso',
@@ -44,7 +44,7 @@ var sketchList = [
 		materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
 		paper: 'Moleskin Watercolour',
 		height: '7 inches',
-		width: '4.5 inches'
+		width: '4.5 inches',
 		date: '22/11/2016',
 		hours: 6,
 		location: 'Philosafy Café',
