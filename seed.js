@@ -3,7 +3,7 @@
 
 var db = require('./models');
 
-var sketch1 = new Sketch (
+var sketch1 = new db.Sketch (
 
 	sketch = 'https://www.instagram.com/p/BNI4ppXj_bI/',
 	name = 'Camila',
