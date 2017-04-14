@@ -86,8 +86,7 @@ app.get('/api/sketchbook', function (req, res) {
   // send all books as JSON response
   db.Sketch.find({})
     // populate fills in the author id with all the author data
-    // .populate('author')
-
+    .populate('material')
     .exec(function(err, sketches){
 
       if (err) { 

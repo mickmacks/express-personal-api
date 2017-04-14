@@ -3,11 +3,19 @@
 
 var db = require('./models');
 
+var standardMaterials = new db.Material ({
+
+	1: 'Watercolour',
+	2: 'Watercolour Pencil',
+	3: 'Acrylic'
+
+});
+
 var sketch1 = new db.Sketch({ 
 
 	sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
 	name: 'Camila',
-	// materials: 'Material',
+	materials: standardMaterials._id,
 	paper: 'Moleskin Watercolour',
 	height: '8.5 inches',
 	width: '11 inches',
@@ -24,7 +32,7 @@ var sketch2 = new db.Sketch({
 
 	sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
 	name: 'Jack',
-	// materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
+	materials: standardMaterials._id,
 	paper: 'Moleskin Watercolour',
 	height: '8.5 inches',
 	width: '11 inches',
@@ -41,7 +49,7 @@ var sketch3 = new db.Sketch({
 
 	sketch: 'https://www.instagram.com/p/BNI4ppXj_bI/',
 	name: 'Rosa',
-	// materials: ['Watercolour', 'Watercolour pencil', 'Acrylic'],
+	materials: standardMaterials._id,
 	paper: 'Moleskin Watercolour',
 	height: '7 inches',
 	width: '4.5 inches',
